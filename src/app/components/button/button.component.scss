@@ -1,0 +1,93 @@
+@import "colors.scss";
+
+.button-component {
+  border: none;
+  cursor: pointer;
+  font-weight: normal;
+  text-align: center;
+  border-radius: $radius;
+  font-family: "Poppins", sans-serif;
+}
+
+//tipos
+.primary {
+  background-color: $primary;
+  border-color: $primary;
+  color: $whitesmoke;
+
+  &:hover {
+    background-color: $primary-hover;
+    border-color: $primary-hover;
+  }
+}
+
+.secondary {
+  color: $whitesmoke;
+  background-color: $secondary;
+  border-color: $secondary;
+
+  &:hover {
+    background-color: $secondary-hover;
+    border-color: $secondary-hover;
+  }
+}
+
+.outline {
+  color: $primary;
+  background-color: transparent;
+  border: 1px solid $primary;
+
+  &:hover {
+    color: $primary-hover;
+    border-color: $primary-hover;
+  }
+}
+
+.warning {
+  color: #000;
+  background-color: $warning;
+  border-color: $warning;
+
+  &:hover {
+    background-color: $warning-hover;
+    border-color: $warning-hover;
+  }
+}
+
+.danger {
+  color: $whitesmoke;
+  background-color: $danger;
+  border-color: $danger;
+
+  &:hover {
+    background-color: $danger-hover;
+    border-color: $danger-hover;
+  }
+}
+
+.success {
+  color: $whitesmoke;
+  background-color: $success;
+  border-color: $success;
+
+  &:hover {
+    background-color: $success-hover;
+    border-color: $success-hover;
+  }
+}
+
+//tamanhos
+.small {
+  font-size: 12px;
+  padding: 6px 12px;
+}
+
+.medium {
+  font-size: 14px;
+  padding: 8px 16px;
+}
+
+.large {
+  font-size: 18px;
+  padding: 10px 20px;
+}

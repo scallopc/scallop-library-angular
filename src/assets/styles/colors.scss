@@ -1,12 +1,8 @@
 // Variables
-
-$bg-xriot: #026b95;
 $bodyfont: "Montserrat", sans-serif;
 $headingfont: "Montserrat", sans-serif;
 
 /*Theme Colors*/
-$topbar: #1976d2;
-$sidebar: #fff;
 $sidebar-white: #e5edef;
 $sidebar-alt: #edf0f5;
 $bodycolor: #f6f9fa;
@@ -20,23 +16,39 @@ $themecolor: #20aee3;
 $themecolor-alt: #26c6da;
 $themecolor-dark: #028ee1;
 
-/*Light colors*/
-$light-danger: #f9e7eb;
-$light-success: #e8fdeb;
-$light-warning: #fff8ec;
-$light-primary: #f1effd;
-$light-info: #cfecfe;
-$light-inverse: #f6f6f6;
-$light-megna: #e0f2f4;
+/*colors*/
+$whitesmoke: #f6f6f6;
 
-$danger-dark: #e6294b;
-$success-dark: #04b381;
-$warning-dark: #e9ab2e;
-$primary-dark: #6352ce;
-$info-dark: #1d96c3;
-$red-dark: #d61f1f;
-$inverse-dark: #232a37;
-$dark-transparent: rgba(0, 0, 0, 0.05);
+$primary: #0064bf;
+$primary-hover: #0045a8;
+
+$secondary: #828282;
+$secondary-hover: #666666;
+
+$success: #64d629;
+$success-hover: #5bc325;
+
+$danger: #ff4c06;
+$danger-hover: #e84100;
+
+$warning: #fdd720;
+$warning-hover: #f2cb0c;
+
+$orange: #f27000;
+$orange-hover: #ce6306;
+
+$darkgray: #333333;
+$lightgray: #999999;
+$purple: #7a1193;
+$linkedin: #0079b0;
+$linkedin-hover: #006a9b;
+$google: #e1493f;
+$google-hover: #c54138;
+$facebook: #395a94;
+$facebook-hover: #325187;
+// $danger: #e6294b;
+// $success: #04b381;
+// $warning: #e9ab2e;
 
 $info-shadow: 0 2px 2px 0 rgba(66, 165, 245, 0.14),
   0 3px 1px -2px rgba(66, 165, 245, 0.2), 0 1px 5px 0 rgba(66, 165, 245, 0.12);
