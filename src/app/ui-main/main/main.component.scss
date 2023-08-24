@@ -1,7 +1,17 @@
 .main {
-  background-color: #b0d3ff;
-  display: grid;
-  grid-template-columns: 230px 1fr;
   height: 100vh;
   width: 100%;
+  padding: 20px;
+  display: flex;
+  gap: 20px;
+}
+
+.card-container {
+  &.menu-flex {
+    //flex: 0;
+    max-width: 300px;
+  }
+  &.content-flex {
+    // flex: 0;
+  }
 }

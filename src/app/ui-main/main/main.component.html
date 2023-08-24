@@ -1,8 +1,14 @@
 <div class="main">
-    <div>
-        <app-menu></app-menu>
+    <div class="card-container menu-flex">
+        <app-menu [menuItems]="['Button', 'Tabs']" [selectedMenuItem]="currentPage" (pageChange)="changePage($event)"></app-menu>
     </div>
-    <div>
-        <app-content></app-content>
+    <div class="card-container content-flex">
+        <!-- <app-content></app-content> -->
+        <div *ngIf="currentPage === 'Button'">
+            <app-button-page></app-button-page>
+        </div>
+        <div *ngIf="currentPage === 'Tabs'">
+            <app-tabs-page></app-tabs-page>
+        </div>
     </div>
 </div>

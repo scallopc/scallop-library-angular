@@ -1,0 +1,19 @@
+// .card-container {
+//   background-color: darkgray;
+//   height: 100%;
+// }
+
+.menu-container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.menu-item {
+  list-style: none;
+  background-color: rgb(197, 142, 142);
+}
+
+.selected {
+  background-color: red;
+}

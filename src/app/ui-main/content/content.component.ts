@@ -6,12 +6,12 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./content.component.scss'],
 })
 export class ContentComponent implements OnInit {
+  currentPage = 'home';
+
+  changePage(page: string) {
+    this.currentPage = page;
+  }
   constructor() {}
 
   ngOnInit(): void {}
-
-  onButtonClicked(): void {
-    console.log('Botão clicado!');
-    // Adicione a lógica do que deseja fazer quando o botão for clicado
-  }
 }

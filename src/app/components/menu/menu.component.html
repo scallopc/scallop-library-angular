@@ -1,0 +1,3 @@
+<ul class="menu-container">
+    <li class="menu-item" [ngClass]="{'selected': selectedMenuItem === item}" *ngFor="let item of menuItems" (click)="changePage(item)">{{ item }}</li>
+</ul>
