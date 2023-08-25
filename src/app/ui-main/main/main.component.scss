@@ -6,12 +6,8 @@
   gap: 20px;
 }
 
-.card-container {
+.card-body {
   &.menu-flex {
-    //flex: 0;
     max-width: 300px;
-  }
-  &.content-flex {
-    // flex: 0;
   }
 }
