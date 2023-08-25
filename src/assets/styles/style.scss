@@ -6,10 +6,11 @@
   outline: none;
   font-family: "Poppins", sans-serif;
   box-sizing: border-box;
-  background-color: $bodycolor-alt;
+  font-size: 14px;
 }
 
 body {
+  background-color: $bodycolor-alt;
   overflow: hidden;
 }
 
@@ -18,42 +19,47 @@ body {
   width: 5px;
   height: 5px;
 }
+
 ::-webkit-scrollbar-button {
   width: 0px;
   height: 0px;
 }
+
 ::-webkit-scrollbar-thumb {
-  background: $themecolor-dark;
+  background: $primary;
   border: 0px none #ffffff;
   border-radius: 50px;
 }
+
 ::-webkit-scrollbar-thumb:hover {
-  background: $themecolor;
+  background: $primary-hover;
 }
-::-webkit-scrollbar-thumb:active {
-  background: #000000;
-}
+
 ::-webkit-scrollbar-track {
-  background: #666666;
-  border: 0px none #ffffff;
+  background: $bodycolor-white;
+  border: 0px none transparent;
   border-radius: 50px;
 }
-::-webkit-scrollbar-track:hover {
-  background: #666666;
-}
-::-webkit-scrollbar-track:active {
-  background: #333333;
-}
+
 ::-webkit-scrollbar-corner {
   background: transparent;
 }
 
-//classes gerais
-.card-container {
+//div principal
+.card-body {
   padding: 20px 15px;
   border-radius: 10px;
   background-color: $whitesmoke;
   width: 100%;
   box-shadow: $default-shadow;
   overflow: auto;
+}
+//suporte da div
+.card-container {
+  height: 100%;
+  overflow: auto;
+}
+//conteudo da div
+.card-content {
+  margin-right: 10px;
 }
