@@ -7,6 +7,7 @@ import { ContentComponent } from './content/content.component';
 import { ComponentsModule } from '../components/components.module';
 import { ButtonPageComponent } from './pages/button-page/button-page.component';
 import { TabsPageComponent } from './pages/tabs-page/tabs-page.component';
+import { HeaderComponent } from './header/header.component';
 
 @NgModule({
   declarations: [
@@ -14,6 +15,7 @@ import { TabsPageComponent } from './pages/tabs-page/tabs-page.component';
     ContentComponent,
     ButtonPageComponent,
     TabsPageComponent,
+    HeaderComponent,
   ],
   imports: [CommonModule, FormsModule, HttpClientModule, ComponentsModule],
   exports: [MainComponent],
