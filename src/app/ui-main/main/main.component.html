@@ -1,7 +1,7 @@
 <app-header></app-header>
 <div class="main">
     <div class="card-body menu-flex">
-        <app-menu [menuItems]="['Button', 'Tabs']" [selectedMenuItem]="currentPage" (pageChange)="changePage($event)"></app-menu>
+        <app-menu [menuItems]="menuList" [selectedMenuItem]="currentPage" (pageChange)="changePage($event)"></app-menu>
     </div>
     <div class="card-body content-flex">
         <div class="card-container">

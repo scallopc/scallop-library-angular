@@ -14,7 +14,7 @@ import {
 })
 export class MenuComponent implements OnInit {
   @Output() pageChange = new EventEmitter<any>();
-  @Input() menuItems: string[] = [];
+  @Input() menuItems: MenuItem[] = [];
   @Input() selectedMenuItem: string = ''; // Propriedade para rastrear o item selecionado
 
   constructor(private cdr: ChangeDetectorRef) {}
@@ -26,4 +26,8 @@ export class MenuComponent implements OnInit {
     this.pageChange.emit(page);
     this.cdr.detectChanges(); // Detect changes manually
   }
+}
+interface MenuItem {
+  name: string;
+  icon: string;
 }
