@@ -1,3 +1,11 @@
 <ul class="menu-container">
-    <li class="menu-item" [ngClass]="{'selected': selectedMenuItem === item}" *ngFor="let item of menuItems" (click)="changePage(item)">{{ item }}</li>
+    <li class="menu-item" *ngFor="let item of menuItems" (click)="changePage(item.name)">
+        <div class="selected fade-in" *ngIf="selectedMenuItem === item.name"></div>
+        <span>
+            <i class="bi" [ngClass]="item.icon"></i>
+            <p>
+                {{ item.name }}
+            </p>
+        </span>
+    </li>
 </ul>

@@ -6,6 +6,11 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./main.component.scss'],
 })
 export class MainComponent implements OnInit {
+  menuList = [
+    { name: 'Button', icon: 'bi-ui-radios' },
+    { name: 'Tabs', icon: 'bi-card-list' },
+  ];
+
   constructor() {}
 
   ngOnInit(): void {}
