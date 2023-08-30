@@ -8,6 +8,7 @@ import { ComponentsModule } from '../components/components.module';
 import { ButtonPageComponent } from './pages/button-page/button-page.component';
 import { TabsPageComponent } from './pages/tabs-page/tabs-page.component';
 import { HeaderComponent } from './header/header.component';
+import { UiMainRoutingModule } from './ui-main-routing.module';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,7 @@ import { HeaderComponent } from './header/header.component';
     TabsPageComponent,
     HeaderComponent,
   ],
-  imports: [CommonModule, FormsModule, HttpClientModule, ComponentsModule],
+  imports: [CommonModule, ComponentsModule, UiMainRoutingModule],
   exports: [MainComponent],
 })
 export class UiMainModule {}
