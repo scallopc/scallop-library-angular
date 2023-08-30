@@ -19,6 +19,6 @@ import { UiMainRoutingModule } from './ui-main-routing.module';
     HeaderComponent,
   ],
   imports: [CommonModule, ComponentsModule, UiMainRoutingModule],
-  exports: [MainComponent],
+  exports: [MainComponent, HeaderComponent],
 })
 export class UiMainModule {}

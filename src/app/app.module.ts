@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { UiMainModule } from './ui-main/ui-main.module';
 import { UiMainRoutingModule } from './ui-main/ui-main-routing.module';
 import { RouterModule } from '@angular/router';
+import { HeaderComponent } from './ui-main/header/header.component';
 
 @NgModule({
   declarations: [AppComponent],

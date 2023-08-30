@@ -7,7 +7,7 @@ import { TabsPageComponent } from './ui-main/pages/tabs-page/tabs-page.component
 const routes: Routes = [
   {
     path: '',
-    component: MainComponent,
+    component: TabsPageComponent,
     children: [
       { path: '', redirectTo: 'button', pathMatch: 'full' },
       { path: 'button', component: ButtonPageComponent },
