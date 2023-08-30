@@ -1,11 +1,39 @@
 <ul class="menu-container">
-    <li class="menu-item" *ngFor="let item of menuItems" (click)="changePage(item.name)">
-        <div class="selected fade-in" *ngIf="selectedMenuItem === item.name"></div>
-        <span>
-            <i class="bi" [ngClass]="item.icon"></i>
-            <p>
-                {{ item.name }}
-            </p>
-        </span>
-    </li>
+    <div *ngFor="let item of menuItems">
+
+        <div class="menu-item" (click)="changePage(item)" [routerLink]="item.route">
+            <div class="selected fade-in" *ngIf="selectedMenuItem.route === item.route && !item.subMenuItems"></div>
+            <span>
+                <div *ngIf="item.icon">
+
+                    <i class="bi" [ngClass]="item.icon"></i>
+                </div>
+                <p>
+                    {{ item.name }}
+                </p>
+            </span>
+
+        </div>
+
+        <div class="submenu" *ngIf="showSubMenu && item.subMenuItems">
+            <div *ngFor="let subItem of item.subMenuItems">
+                <div class="menu-item" *ngIf="!subItem.url" (click)="changePage(subItem)" [routerLink]="subItem.route">
+                    <div class="selected fade-in" *ngIf="selectedMenuItem.route === subItem.route"></div>
+                    <span>
+                        <p>
+                            {{ subItem.name }}
+                        </p>
+                    </span>
+
+                </div>
+
+                <div *ngIf="subItem.url">
+                    <a [href]="subItem.url" target="_blank" rel="noopener noreferrer">
+                        {{ subItem.name }}
+                    </a>
+                </div>
+            </div>
+        </div>
+
+    </div>
 </ul>
