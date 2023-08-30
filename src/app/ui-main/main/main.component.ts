@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { ButtonComponent } from 'src/app/components/button/button.component';
 import { TabsComponent } from 'src/app/components/tabs/tabs.component';
 import { Router } from '@angular/router';
@@ -20,9 +20,8 @@ export class MainComponent implements OnInit {
         { name: 'External Link', url: 'https://example.com' },
       ],
     },
-    { name: 'Tabs', icon: 'bi-card-list', route: 'tabs' },
   ];
-
+  @Input() showMenu: any;
   currentPage: string = '';
   selectedMenuItem = '';
 
