@@ -3,16 +3,15 @@ $bodyfont: "Montserrat", sans-serif;
 $headingfont: "Montserrat", sans-serif;
 
 /*colors*/
-$bodycolor-white: #e5edef;
+$bodycolor-white: #fff;
 $bodycolor-alt: #edf0f5;
-$bodycolor: #f6f9fa;
-$headingtext: #455a64;
-$bodytext: #67757c;
-$sidebar-text: #8d97ad;
+$bodycolor: #707070;
+$detail-text: #8d97ad;
+$color-text: #5f696e;
 
 $whitesmoke: #f6f6f6;
 
-$primary: #0064bf;
+$primary: #0064fb;
 $primary-hover: #0045a8;
 
 $secondary: #828282;
@@ -76,6 +75,5 @@ $default-shadow-hover: 0 14px 26px -12px rgba(169, 169, 169, 0.42),
 /*Extra Variable*/
 $border: rgba(120, 130, 140, 0.13);
 $table-border: #f3f1f1;
-$color-text: #455a64;
 $radius: 4px;
 $form-brd: #b1b8bb;
