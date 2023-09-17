@@ -6,12 +6,13 @@ import { Component, Input, Output, EventEmitter, OnInit } from '@angular/core';
   styleUrls: ['./button.component.scss'],
 })
 export class ButtonComponent implements OnInit {
-  @Input() text: string = '';
+  @Input() label: string = 'Button label';
   @Input() size: string = 'medium';
   @Input() type: string = 'primary';
   @Output() clicked: EventEmitter<void> = new EventEmitter<void>();
   @Input() iconRight: string = '';
   @Input() iconLeft: string = '';
+  @Input() disabled: boolean = false;
 
   constructor() {}
 
@@ -20,6 +21,8 @@ export class ButtonComponent implements OnInit {
   }
 
   handleClick(): void {
-    this.clicked.emit();
+    if (!this.disabled) {
+      this.clicked.emit();
+    }
   }
 }
