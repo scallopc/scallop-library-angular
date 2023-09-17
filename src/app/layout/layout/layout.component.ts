@@ -1,6 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { MenuService } from 'src/app/components/menu/menu.service';
+import { MenuService } from 'src/app/layout/menu/menu.service';
 
 @Component({
   selector: 'app-layout',
@@ -9,6 +9,7 @@ import { MenuService } from 'src/app/components/menu/menu.service';
 })
 export class LayoutComponent implements OnInit {
   menuList = [
+    { name: 'Home', icon: 'bi-ui-radios', route: 'home' },
     { name: 'Button', icon: 'bi-ui-radios', route: 'page/button' },
     { name: 'Tabs', icon: 'bi-card-list', route: 'page/tabs' },
     {

@@ -16,6 +16,9 @@
   max-width: 270px;
   min-width: 80px;
   overflow: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
 }
 
 .main-container {
