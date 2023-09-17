@@ -5,10 +5,11 @@ import { TabsPageComponent } from './tabs-page/tabs-page.component';
 import { ComponentsModule } from 'src/app/components/components.module';
 import { HomePageComponent } from './home-page/home-page.component';
 import { LayoutModule } from '../layout/layout.module';
+import { PagesRoutingModule } from './pages-routing.module';
 
 @NgModule({
   declarations: [ButtonPageComponent, TabsPageComponent, HomePageComponent],
-  imports: [CommonModule, ComponentsModule, LayoutModule],
+  imports: [CommonModule, PagesRoutingModule, ComponentsModule, LayoutModule],
   exports: [],
 })
 export class PagesModule {}
