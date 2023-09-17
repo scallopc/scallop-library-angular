@@ -1,1 +1,1 @@
-<button [class]="['button-component', type, size].join(' ')" (click)="handleClick()"> <i [class]="iconRight"></i> {{ text }} <i [class]="iconLeft"></i></button>
+<button [class]="['button-component', type, size].join(' ')" [ngClass]="{'disabled': disabled}" (click)="handleClick()" [disabled]="disabled"> <i [class]="iconLeft"></i> {{ label }} <i [class]="iconRight"></i></button>

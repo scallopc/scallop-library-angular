@@ -1,0 +1,16 @@
+<div *ngIf="isFullModalOpen" class="overlay slide-in-bottom ">
+    <div class="full-modal-mode-container">
+        <div class="full-modal-mode-content">
+            <ng-content></ng-content>
+            <div class="icon-close">
+                <i class="bi bi-x" (click)="close()"></i>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- 
+    como Usar:
+    <app-full-modal-mode [isFullModalOpen]="variave boleana que controla a visibilidade" (closeFullModalEvent)="função para fechar">
+    <app-componente que será o conteudo do modal >
+</app-full-modal-mode>
+ -->

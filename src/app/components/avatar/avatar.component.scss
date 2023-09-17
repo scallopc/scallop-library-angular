@@ -1,0 +1,50 @@
+@import "colors";
+
+.avatar {
+  border-radius: 50%;
+  overflow: hidden;
+  border: 1px solid $border;
+  position: relative;
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .initials {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+.small {
+  width: 40px;
+  height: 40px;
+  .initials {
+    font-size: 15px;
+  }
+}
+
+.medium {
+  width: 60px;
+  height: 60px;
+
+  .initials {
+    font-size: 20px;
+  }
+}
+
+.large {
+  width: 80px;
+  height: 80px;
+
+  .initials {
+    font-size: 30px;
+  }
+}

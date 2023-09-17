@@ -6,10 +6,20 @@
   font-weight: normal;
   text-align: center;
   border-radius: $radius;
-  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  width: 100%;
+  display: flex;
+  gap: 8px;
+  justify-content: center;
+  outline: none;
 }
 
-//tipos
+.disabled {
+  opacity: 0.3;
+  pointer-events: none;
+}
+
+//type
 .primary {
   background-color: $primary;
   border-color: $primary;
@@ -76,7 +86,7 @@
   }
 }
 
-//tamanhos
+//size
 .small {
   font-size: 12px;
   padding: 6px 12px;
@@ -85,6 +95,7 @@
 .medium {
   font-size: 14px;
   padding: 8px 16px;
+  height: 40px;
 }
 
 .large {

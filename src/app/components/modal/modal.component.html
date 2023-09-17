@@ -1,0 +1,10 @@
+<div *ngIf="openModal" class="overlay" (click)="close()" [ngStyle]="{'display': openModal ? 'flex' : 'none'}">
+    <div class="app-modal-container" (click)="preventClose($event)">
+        <div class="icon-close">
+            <i class="bi bi-x" (click)="close()"></i>
+        </div>
+        <div class="app-modal-content">
+            <ng-content></ng-content>
+        </div>
+    </div>
+</div>

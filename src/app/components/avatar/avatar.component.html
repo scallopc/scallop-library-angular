@@ -1,0 +1,4 @@
+<div [class]="['avatar', size].join(' ')" [ngClass]="customClass">
+    <img [src]="imageUrl" alt="{{ altText }}" (error)="handleImageError()" (load)="handleImageLoad()" />
+    <div class="initials" [ngStyle]="{'background-color': getBackgroundColor()}" *ngIf="showInitials">{{ getInitials() }}</div>
+</div>
