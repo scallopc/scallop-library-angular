@@ -9,9 +9,10 @@ import { MenuService } from 'src/app/layout/menu/menu.service';
 })
 export class LayoutComponent implements OnInit {
   menuList = [
-    { name: 'Home', icon: 'bi-ui-radios', route: 'home' },
+    { name: 'Home', icon: 'bi-house', route: 'home' },
     { name: 'Button', icon: 'bi-ui-radios', route: 'page/button' },
     { name: 'Tabs', icon: 'bi-card-list', route: 'page/tabs' },
+    { name: 'Avatar', icon: 'bi-person-circle', route: 'page/avatar' },
     {
       name: 'Ex',
       icon: 'bi-card-list',

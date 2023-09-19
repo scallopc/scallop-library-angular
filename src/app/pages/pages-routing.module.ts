@@ -2,10 +2,12 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { ButtonPageComponent } from './button-page/button-page.component';
 import { TabsPageComponent } from './tabs-page/tabs-page.component';
+import { AvatarComponent } from '../components/avatar/avatar.component';
 
 const routes: Routes = [
   { path: 'button', component: ButtonPageComponent },
   { path: 'tabs', component: TabsPageComponent },
+  { path: 'avatar', component: AvatarComponent },
 ];
 
 @NgModule({
