@@ -6,8 +6,8 @@ import { Component, Input, OnInit } from '@angular/core';
   styleUrls: ['./avatar.component.scss'],
 })
 export class AvatarComponent implements OnInit {
-  @Input() imageUrl: string;
-  @Input() altText: string;
+  @Input() imageUrl: string = '';
+  @Input() altText: string = '';
   @Input() size: string = 'small';
   showInitials: boolean = false;
   loading: boolean = true;
