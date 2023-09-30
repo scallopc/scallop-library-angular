@@ -39,10 +39,15 @@ export class AvatarComponent implements OnInit {
     return '';
   }
 
+  // getBackgroundColor(): string {
+  //   const initials = this.getInitials();
+  //   const hash = initials.charCodeAt(0) + initials.charCodeAt(1); // Cálculo simples com base nas iniciais
+  //   const hue = hash % 360; // Limitando a cor entre 0 e 359 (valores válidos de matiz)
+  //   return `hsl(${hue}, 70%, 60%)`; // Definindo a cor de fundo com base na matiz calculada
+  // }
+
   getBackgroundColor(): string {
-    const initials = this.getInitials();
-    const hash = initials.charCodeAt(0) + initials.charCodeAt(1); // Cálculo simples com base nas iniciais
-    const hue = hash % 360; // Limitando a cor entre 0 e 359 (valores válidos de matiz)
-    return `hsl(${hue}, 70%, 60%)`; // Definindo a cor de fundo com base na matiz calculada
+    const randomHue = Math.floor(Math.random() * 360); // Gerar um valor de matiz aleatório entre 0 e 359
+    return `hsl(${randomHue}, 70%, 60%)`; // Definindo a cor de fundo com base na matiz aleatória
   }
 }
