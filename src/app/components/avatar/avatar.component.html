@@ -1,4 +1,5 @@
-<div [class]="['avatar', size].join(' ')" [ngClass]="customClass">
+<div [class]="['avatar', size].join(' ')" [ngClass]="customClass" [ngStyle]="textStyle">
     <img [src]="imageUrl" alt="{{ altText }}" (error)="handleImageError()" (load)="handleImageLoad()" />
-    <div class="initials" [ngStyle]="{'background-color': getBackgroundColor()}" *ngIf="showInitials">{{ getInitials() }}</div>
+    <div class="initials" [ngStyle]="{'background-color': getBackgroundColor()}" *ngIf="showInitials">{{ getInitials()
+        }}</div>
 </div>
