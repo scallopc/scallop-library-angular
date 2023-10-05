@@ -12,7 +12,7 @@ export class AvatarComponent implements OnInit {
   showInitials: boolean = false;
   loading: boolean = true;
   @Input() customClass: any = '';
-  textStyle: any = null;
+  textStyle: any = '';
 
   constructor() {}
 
@@ -40,46 +40,37 @@ export class AvatarComponent implements OnInit {
     return '';
   }
 
-  // getBackgroundColor(): string {
-  //   const initials = this.getInitials();
-  //   const hash = initials.charCodeAt(0) + initials.charCodeAt(1); // Cálculo simples com base nas iniciais
-  //   const hue = hash % 360; // Limitando a cor entre 0 e 359 (valores válidos de matiz)
-  //   return `hsl(${hue}, 70%, 60%)`; // Definindo a cor de fundo com base na matiz calculada
-  // }
-
-  // getBackgroundColor(): string {
-  //   const randomHue = Math.floor(Math.random() * 360); // Gerar um valor de matiz aleatório entre 0 e 359
-  //   return `hsl(${randomHue}, 70%, 60%)`; // Definindo a cor de fundo com base na matiz aleatória
-  // }
-
   getBackgroundColor(): string {
     const randomHue = Math.floor(Math.random() * 360); // Gerar um valor de matiz aleatório entre 0 e 359
-    const randomSaturation = Math.floor(Math.random() * 31) + 70; // Gerar saturação aleatória entre 70% e 100%
-    const backgroundColor = `hsl(${randomHue}, ${randomSaturation}%, 60%)`; // Definindo a cor de fundo com base na matiz e saturação aleatórias
-
-    const luminanceThreshold = 0.5; // Limiar de luminância inicial
-
-    // Verificar se a luminância da cor de fundo é menor que o limiar adaptável
-    const luminance = this.calculateLuminance(backgroundColor);
-    const textColor = luminance < luminanceThreshold ? 'white' : 'black';
-
-    // Aplicar a cor de fundo e a cor do texto
-    this.textStyle = {
-      'background-color': backgroundColor,
-      color: textColor,
-    };
-
-    return backgroundColor;
+    return `hsl(${randomHue}, 70%, 60%)`; // Definindo a cor de fundo com base na matiz aleatória
   }
 
-  calculateLuminance(color: string): number {
-    const rgb = color.match(/\d+/g);
-    if (rgb) {
-      const [r, g, b] = rgb.map(Number);
+  getContrastColor(backgroundColor: string): string {
+    // Transformar a cor de fundo em RGB
+    const rgb = this.hexToRgb(backgroundColor);
 
-      // Calcular a luminância usando a fórmula de luminância relativa
-      return (0.299 * r + 0.587 * g + 0.114 * b) / 255;
-    }
-    return 0;
+    // Calcular a luminosidade da cor de fundo usando a fórmula de luminosidade do W3C
+    const luminosity = 0.299 * rgb.r + 0.587 * rgb.g + 0.114 * rgb.b;
+
+    // Definir um valor de referência de luminosidade
+    const referenceLuminosity = 128;
+
+    // Se a luminosidade da cor de fundo for maior que o valor de referência, retorne 'black', caso contrário, retorne 'white'
+    return luminosity > referenceLuminosity ? 'black' : 'white';
+  }
+
+  hexToRgb(hex: string): { r: number; g: number; b: number } {
+    // Remove o "#" se estiver presente
+    hex = hex.replace(/^#/, '');
+
+    // Converte para um valor numérico hexadecimal
+    const num = parseInt(hex, 16);
+
+    // Extraia os valores RGB
+    const r = (num >> 16) & 255;
+    const g = (num >> 8) & 255;
+    const b = num & 255;
+
+    return { r, g, b };
   }
 }
