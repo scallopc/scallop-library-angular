@@ -7,9 +7,10 @@ import { HomePageComponent } from './home-page/home-page.component';
 import { LayoutModule } from '../layout/layout.module';
 import { PagesRoutingModule } from './pages-routing.module';
 import { AvatarPageComponent } from './avatar-page/avatar-page.component';
+import { InputPageComponent } from './input-page/input-page.component';
 
 @NgModule({
-  declarations: [ButtonPageComponent, TabsPageComponent, HomePageComponent, AvatarPageComponent],
+  declarations: [ButtonPageComponent, TabsPageComponent, HomePageComponent, AvatarPageComponent, InputPageComponent],
   imports: [CommonModule, PagesRoutingModule, ComponentsModule, LayoutModule],
   exports: [],
 })

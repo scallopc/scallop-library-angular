@@ -13,6 +13,7 @@ export class LayoutComponent implements OnInit {
     { name: 'Button', icon: 'bi-ui-radios', route: 'page/button' },
     { name: 'Tabs', icon: 'bi-card-list', route: 'page/tabs' },
     { name: 'Avatar', icon: 'bi-person-circle', route: 'page/avatar' },
+    { name: 'Input', icon: 'bi-person-circle', route: 'page/input' },
     {
       name: 'Ex',
       icon: 'bi-card-list',
