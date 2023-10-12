@@ -89,7 +89,6 @@ export class InputComponent implements OnInit {
     return numericValue;
   }
 
-  // Função para aplicar uma máscara a um valor
   applyMask(value: string, mask: string): string {
     let result = '';
     let valueIndex = 0;
