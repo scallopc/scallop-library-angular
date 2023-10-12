@@ -109,7 +109,6 @@ export class InputComponent implements OnInit {
     return result;
   }
 
-  // Função chamada ao preencher o campo
   fillValue($event: Event) {
     const e = $event.target as HTMLInputElement;
     this.value = this.formatWithMask(e.value, this.mask);
