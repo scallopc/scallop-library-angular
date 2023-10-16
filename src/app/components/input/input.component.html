@@ -1,7 +1,7 @@
 <div class="input-container">
     <div>
         <label [for]="inputId">{{ label }}</label>
-        <i *ngIf="required" class="bi bi-asterisk"></i>
+        <!-- <i *ngIf="required" class="bi bi-asterisk"></i> -->
     </div>
     <input [formControl]="control" [id]="inputId" [placeholder]="placeholder" [(ngModel)]="value" (change)="fillValue($event)" [ngClass]="cssClass" [mask]="mask" [required]="required" />
 </div>
