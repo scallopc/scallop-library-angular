@@ -63,7 +63,7 @@ export class AvatarComponent implements OnInit {
     // Remove o "#" se estiver presente
     hex = hex.replace(/^#/, '');
 
-    // Converte para um valor numérico hexadecimal
+    // Converte para um valor numérico hexadecimal //
     const num = parseInt(hex, 16);
 
     // Extraia os valores RGB
